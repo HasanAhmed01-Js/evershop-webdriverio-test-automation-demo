@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","11847","Successfully search a valid product","","Fri May 02 14:18:29 GMT+06:00 2025","passed","Fri May 02 14:18:41 GMT+06:00 2025","","EverShop Search test automation","",""
+"","10784","Sucessfully add a product into the cart","","Fri May 02 14:19:22 GMT+06:00 2025","passed","Fri May 02 14:19:33 GMT+06:00 2025","","Demo QA - Product test suit","",""
+"","41360","Sucessfully add a product into the cart","","Fri May 02 14:18:41 GMT+06:00 2025","passed","Fri May 02 14:19:22 GMT+06:00 2025","","EverShop Search test automation","",""
