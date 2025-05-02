@@ -54,4 +54,5 @@ By Suite : npm run product
 >Ensure Chrome is installed since chromedriver is used.
 For Allure Report ```npm run getResult ``` for enhanced reporting.
 
+---
 ![Report](assets/Allure_EverShop_Test_WebDriverIO_Report.png)
