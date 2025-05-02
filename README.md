@@ -1,4 +1,4 @@
-# 🧪 WebdriverIO Test Automation - Evershop Demo
+# 🧪 Evershop Webdriverio Test Automation
 This repository contains a test automation setup using **WebdriverIO** for the [Evershop Demo Store](https://demo.evershop.io/). The test covers a user journey including searching for a product, selecting options, and adding to cart.
 
 **Scenario Name**: Add Product to Cart
@@ -33,7 +33,7 @@ This repository contains a test automation setup using **WebdriverIO** for the [
 git clone https://github.com/yourusername/evershop-wdio-test.git
 cd evershop-wdio-test
 npm install
-npx wdio config
+npm init wdio@latest .
 
 Choose:
 Test runner: local
@@ -50,8 +50,8 @@ npm run wdio
 By Suite : npm run product
 ``` 
 
-## Notes
+## Allure report
 >Ensure Chrome is installed since chromedriver is used.
-
 For Allure Report ```npm run getResult ``` for enhanced reporting.
 
+![Report](assets/Allure_EverShop_Test_WebDriverIO_Report.png)
