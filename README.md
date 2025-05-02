@@ -27,7 +27,7 @@ This repository contains a test automation setup using **WebdriverIO** for the [
 
 ## 🚀 Setup Instructions
 
-### 1. Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/yourusername/evershop-wdio-test.git
