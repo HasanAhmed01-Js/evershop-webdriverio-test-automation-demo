@@ -52,6 +52,7 @@ By Suite : npm run product
 
 ## Allure report
 >Ensure Chrome is installed since chromedriver is used.
+<br>
 For Allure Report ```npm run getResult ``` for enhanced reporting.
 
 ---
