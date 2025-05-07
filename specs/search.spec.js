@@ -13,7 +13,6 @@ describe("EverShop Search test automation", () => {
     });
 
     it("Sucessfully add a product into the cart", async () => {
-
         await productAction.selectProduct(productName);
         await productAction.selectVariation(size, color);
         await browser.pause(5000);
