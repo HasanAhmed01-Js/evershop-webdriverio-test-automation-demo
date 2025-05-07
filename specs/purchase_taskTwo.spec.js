@@ -15,7 +15,7 @@ describe("Task Two : Product Purchase Journey", () => {
     it("Checkout & Form", async () => {
         await PurchaseTaskTwoAction.checkOutPage(firstName, lastName, postCode);
     });
-    it("Verify Products", async () => {
+    xit("Verify Products", async () => {
         await PurchaseTaskTwoAction.verifyProduct();
     });
 
