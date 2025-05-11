@@ -1,4 +1,4 @@
-# 🧪 Swag Labs Ecommerce Website Webdriverio Test Automation
+# 🧪 Swag Labs Ecommerce Website Webdriverio Test Automation.
 This repository contains a test automation setup using **WebdriverIO** for the [Swag Labs](https://www.saucedemo.com/). There are 3 test scenarios and those will covers a user can login with their credentials, adding products into the cart and checkout. 
 
 **Scenario Name**: First : Login with locked_out_user and verify the error message
