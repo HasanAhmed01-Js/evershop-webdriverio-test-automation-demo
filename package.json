@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.js",
     "getResult" : "allure generate --clean allure-results && allure open allure-report",
-    "product" : "wdio wdio.conf.js --suite productToCart"
+    "assignmentTest" : "wdio wdio.conf.js --suite assignment"
   },
   "keywords": [],
   "author": "",

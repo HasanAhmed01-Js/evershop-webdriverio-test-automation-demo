@@ -1,7 +1,7 @@
 
-const login_taskOne = './specs/login_taskOne.spec.js';
-const purchase_taskTwo = './specs/purchase_taskTwo.spec.js';
-const verify_taskThree = './specs/verify_taskThree.spec.js';
+const TaskOne_login = './specs/login_taskOne.spec.js';
+const TaskTwo_purchase3Products = './specs/purchase_taskTwo.spec.js';
+const TaskThree_verify1Product = './specs/verify_taskThree.spec.js';
 exports.config = {
     //
     // ====================
@@ -24,15 +24,14 @@ exports.config = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
-    specs: [purchase_taskTwo],
-    // specs: [product],
-    // suites: {
-    //     productToCart: [
-    //         [login_taskOne],
-    //         [purchase_taskTwo],
-    //         [verify_taskThree]
-    //     ]
-    // },
+    // specs: [TaskThree_verify1Product],
+    suites: {
+        assignment: [
+            [TaskOne_login],
+            [TaskTwo_purchase3Products],
+            [TaskThree_verify1Product]
+        ]
+    },
 
 
     // Patterns to exclude.
@@ -137,15 +136,15 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec'],
-    // reporters: [
-    //     ['allure',
-    //         {
-    //             outputDir: 'allure-results',
-    //             disableWebdriverStepsReporting: true,
-    //             disableWebdriverScreenshotsReporting: true,
-    //         }
-    //     ]
-    // ],
+    reporters: [
+        ['allure',
+            {
+                outputDir: 'allure-results',
+                disableWebdriverStepsReporting: true,
+                disableWebdriverScreenshotsReporting: true,
+            }
+        ]
+    ],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/

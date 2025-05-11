@@ -1,7 +1,4 @@
 class PurchaseTaskTwoObject {
-    get userNameField() {
-        return $("#user-name");
-    }
     get openHumburgerIcon() {
         return $("#react-burger-menu-btn");
     }
@@ -35,18 +32,32 @@ class PurchaseTaskTwoObject {
         return $("#postal-code");
     }
     get continueButtonToPayment() {
-        return $("#postal-code");
+        return $(`//input[@type="submit"]`);
     }
 
-    get productOneName() {
-        return $("a[id='item_4_title_link'] div[class='inventory_item_name']");
+    get productfirstName() {
+        return $("//div[normalize-space()='Sauce Labs Backpack']");
     }
-    // get productTwoName() {
-    //     return $("a[id='item_0_title_link'] div[class='inventory_item_name']");
-    // }
-    // get productThreeName() {
-    //     return $("a[id='item_0_title_link'] div[class='inventory_item_name']");
-    // }
+    get productSecondName() {
+        return $("//div[normalize-space()='Sauce Labs Bike Light']");
+    }
+    get productThirdName() {
+        return $("//div[normalize-space()='Sauce Labs Bolt T-Shirt']");
+    }
+
+    get firstProductPrice() {
+        return $("//div[@class='inventory_item_price'][normalize-space()='$29.99']");
+    }
+    get secondProductPrice() {
+        return $("//div[@class='inventory_item_price'][normalize-space()='$9.99']");
+    }
+    get thirdProductPrice() {
+        return $("//div[@class='inventory_item_price'][normalize-space()='$15.99']");
+    }
+
+    get totalPrice() {
+        return $("//div[@class='summary_total_label']");
+    }
 
     get finishButton() {
         return $("//button[@id='finish']");
@@ -56,7 +67,9 @@ class PurchaseTaskTwoObject {
         return $(".complete-header");
     }
 
-
+    get logoutButton() {
+        return $("#logout_sidebar_link");
+    }
 }
 
 module.exports = new PurchaseTaskTwoObject();

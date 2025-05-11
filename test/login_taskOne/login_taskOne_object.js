@@ -11,7 +11,7 @@ class LoginTaskOneObject {
         return $("#login-button");
     }
 
-    get errorMessage() {
+    get getErrorMessage() {
         return $("//div[@class='error-message-container error']");
     }
 }

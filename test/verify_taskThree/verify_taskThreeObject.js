@@ -8,22 +8,16 @@ class verifyTaskThreeObject {
     get addToCart() {
         return $(".shopping_cart_link");
     }
-    get checkoutButton() {
-        return $("#checkout");
+    get productfirstName() {
+        return $("//div[@class='inventory_item_name']");
+    }
+    get firstProductPrice() {
+        return $("//div[@class='inventory_item_price']");
+    }
+    get totalPrice() {
+        return $("//div[@class='summary_total_label']");
     }
 
-    get firstName() {
-        return $("#first-name");
-    }
-    get lastName() {
-        return $("#last-name");
-    }
-    get postCode() {
-        return $("#postal-code");
-    }
-    get continueButtonToPayment() {
-        return $("#postal-code");
-    }
 }
 
 module.exports = new verifyTaskThreeObject();

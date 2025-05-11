@@ -1,31 +1,14 @@
-const LoginTaskOneObject = require("../login_taskOne/login_taskOne_object");
 const PurchaseTaskTwoObject = require("../purchase_taskTwo/purchase_taskTwoObject");
 const verifyTaskThreeObject = require("../verify_taskThree/verify_taskThreeObject");
+const expectedFirstProductName = "Test.allTheThings() T-Shirt (Red)";
+const expectedFirstProductPrice = 15.99;
+
 class verifyTaskThreeAction {
-    async enterUsername(thirdUsername) {
-        await LoginTaskOneObject.userNameField.setValue(thirdUsername);
-        await browser.pause(5000);
-    }
-
-    async enterPassword(password) {
-        await LoginTaskOneObject.getPasswordField.setValue(password);
-        await browser.pause(5000);
-    }
-
-    async clickLoginButton() {
-        await LoginTaskOneObject.loginButton.click();
-    }
-    async login(thirdUsername, password) {
-        await this.enterUsername(thirdUsername);
-        await this.enterPassword(password);
-        await this.clickLoginButton();
+    async addToCart() {
         await PurchaseTaskTwoObject.openHumburgerIcon.click();
         await browser.pause(2000);
         await PurchaseTaskTwoObject.resetStateButton.click();
         await browser.pause(2000);
-
-    }
-    async addToCart() {
         await verifyTaskThreeObject.filterValue.click();
         await browser.pause(2000);
         await verifyTaskThreeObject.firstProductAddToCart.click();
@@ -43,8 +26,23 @@ class verifyTaskThreeAction {
         await browser.pause(2000);
         await verifyTaskThreeObject.continueButtonToPayment.click()
     }
+    async verifyProductName() {
+        //Getting First Product's Name and Verify
+        const actualFirstProductName = await verifyTaskThreeObject.productfirstName.getText();
+        expect(actualFirstProductName).toEqual(expectedFirstProductName);
+    }
+    async verifyProductPrice() {
+        //Getting FIRST Product Price, verify and convert to Float
+        const actualFirstProductPrice = await verifyTaskThreeObject.firstProductPrice.getText();
+        let firstNumber = parseFloat(actualFirstProductPrice.split('$')[1]);
+        expect(firstNumber).toEqual(expectedFirstProductPrice);
 
-
+        //Finally Calculating TOTAL PRICE & verify
+        const totalPrice = (firstNumber) + 1.28;
+        const getTotalPrice = await verifyTaskThreeObject.totalPrice.getText();
+        let actualTotalPrice = parseFloat(getTotalPrice.split("$")[1]);
+        expect(actualTotalPrice).toEqual(totalPrice);
+    }
 }
 
 module.exports = new verifyTaskThreeAction();
